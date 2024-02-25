@@ -1,0 +1,42 @@
+{
+  "name": "hexaeight-sessions",
+  "version": "1.6.800",
+  "description": "Authenticate Any Email User In Front-End Apps Using HexaEight Sessions",
+  "exports": {
+    "./": "./auth/",
+    "./hexaeightsession.mjs": "./auth/hexaeightsession.mjs",
+    "./hexaeightAIchat.mjs": "./auth/hexaeightAIchat.mjs",
+    "./hexaeightaxios.mjs": "./auth/hexaeightaxios.mjs",
+    "./chatui.css": "./auth/chatui.css"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "authentication",
+    "authorization",
+    "HexaEight",
+    "HexaEight Authentication Assistant",
+    "Copilot Enabled Application",
+    "user management",
+    "frontend security",
+    "session management",
+    "identity management",
+    "frontend development",
+    "web development",
+    "React",
+    "Vue",
+    "Vanilla",
+    "PWA",
+    "frontend frameworks",
+    "encryption",
+    "security",
+    "cryptography",
+    "data protection",
+    "secure storage",
+    "data privacy",
+    "end-to-end encryption"
+  ],
+  "author": "HexaEight Team <admin@hexaeight.com> (https://www.hexaeight.com)",
+  "license": "Apache-2.0"
+}
