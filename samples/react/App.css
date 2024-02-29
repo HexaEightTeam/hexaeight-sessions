@@ -1,0 +1,200 @@
+
+/* Sample CSS that sets some sample UI. It is better to define your own */
+/* @import "hexaeight-sessions/chatui.css"; */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.textarea {
+  width: 80%;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.control-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.q-pa-lg {
+  padding: 16px;
+}
+
+
+.chat-container {
+  max-width: responsive;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.user-container {
+  max-width: responsive;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  overflow: hidden;
+}
+.message-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.message {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  position: relative;
+}
+
+.user-message {
+  background-color: #dbe6f6; /* Light green background color for user messages */
+  color: #000; /* Black text color for user messages */
+  border-radius: 15px;
+  border: 1px solid #dbe6f6;
+  padding: 12px; /* Padding around the message text */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Use a common sans-serif font */
+  font-size: 13px; /* Slightly larger font size for better readability */
+  line-height: 1.4; /* Adjust line height for better spacing */
+  align-self: flex-end;
+  clear: both;
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.user-message .timestamp {
+  color: black; /* White text color for user message header and timestamp */
+}
+
+.bot-message {
+  background-color: #f0e8d8; /* Light gray background color for bot messages */
+  color: #000; /* Black text color for bot messages */
+  padding: 12px; /* Padding around the message text */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Use a common sans-serif font */
+  font-size: 13px; /* Slightly larger font size for better readability */
+  line-height: 1.4; /* Adjust line height for better spacing */
+  align-self: flex-start;
+  clear: both;
+  margin-left: 0;
+  border-radius: 15px;
+  border: 1px solid #f0e8d8;
+  font-weight: bold;
+}
+
+.bot-message .timestamp {
+  color: #000; /* Black text color for bot message header and timestamp */
+}
+
+.bot-message .message-header {
+  color: #000; /* Different text color for the header */
+  border-radius: 5px;
+  padding-bottom: 5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Use a common sans-serif font */
+  font-size: 12px; /* Slightly larger font size for better readability */
+}
+
+.user-message .message-header {
+  color: #000; /* Different text color for the header */
+  border-radius: 5px;
+  padding-bottom: 5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Use a common sans-serif font */
+  font-size: 12px; /* Slightly larger font size for better readability */
+}
+
+.fixed-rows textarea {
+  min-height: unset; /* Remove the min-height */
+  max-height: unset; /* Remove the max-height */
+  height: unset; /* Remove the height */
+}
+
+.limited-autogrow .q-field--labeled .q-field__native {
+  min-height: 3ch;
+  max-height: 6ch;
+}
+
+.scrollable-drawer {
+  height: 100%; /* Adjust if needed */
+  overflow-y: auto;
+}
+
+.scrollable-card {
+  height: 100%; /* Adjust if needed */
+  overflow-y: hidden;
+}
+
+/* Style for the accordion container */
+.accordion {
+  border: 1px solid #ccc;
+}
+
+/* Style for each accordion item */
+.accordion > div {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style for the accordion title */
+.accordion-title {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+/* Style for the accordion content */
+.accordion-content {
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* Style for the accordion content inner div */
+.accordion-content-inner {
+  /* Add your chat bubble styles here */
+  background-color: #eff6fa;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+/* Style for the active accordion content */
+.accordion-content[style] {
+  display: block;
+}

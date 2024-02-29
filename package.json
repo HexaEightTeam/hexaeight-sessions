@@ -1,6 +1,6 @@
 {
   "name": "hexaeight-sessions",
-  "version": "1.6.800",
+  "version": "1.6.837",
   "description": "Authenticate Any Email User In Front-End Apps Using HexaEight Sessions",
   "exports": {
     "./": "./auth/",
@@ -10,8 +10,19 @@
     "./chatui.css": "./auth/chatui.css"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node -e \"const fs = require('fs'); const path = require('path'); const publicDir = path.join(__dirname, 'public'); const samplesDir = path.join(__dirname, 'samples'); const destDir = path.join(__dirname, '..', '..'); if (fs.existsSync(publicDir)) { const destPublicDir = path.join(destDir, 'public'); if (!fs.existsSync(destPublicDir)) { fs.mkdirSync(destPublicDir); } fs.readdirSync(publicDir).forEach(file => { fs.copyFileSync(path.join(publicDir, file), path.join(destPublicDir, file)); }); } if (fs.existsSync(samplesDir)) { const destSamplesDir = path.join(destDir, 'samples'); if (fs.existsSync(destSamplesDir)) { fs.rmSync(destSamplesDir, { recursive: true }); } fs.mkdirSync(destSamplesDir); copyFilesRecursive(samplesDir, destSamplesDir); } function copyFilesRecursive(source, destination) { const files = fs.readdirSync(source); for (const file of files) { const currentSource = path.join(source, file); const currentDest = path.join(destination, file); if (fs.statSync(currentSource).isDirectory()) { fs.mkdirSync(currentDest); copyFilesRecursive(currentSource, currentDest); } else { fs.copyFileSync(currentSource, currentDest); } } }\""
   },
+  "files": [
+    "public/*",
+    "auth/*",
+    "samples/*"
+  ],
+ "browser" : {
+	"fs" : false,
+	"os" : false,
+	"path" : false
+   },
   "keywords": [
     "authentication",
     "authorization",
@@ -38,5 +49,9 @@
     "end-to-end encryption"
   ],
   "author": "HexaEight Team <admin@hexaeight.com> (https://www.hexaeight.com)",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "pouchdb": "^8.0.1"
+  }
 }

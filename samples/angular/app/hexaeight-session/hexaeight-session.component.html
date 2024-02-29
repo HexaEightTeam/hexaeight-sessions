@@ -1,0 +1,30 @@
+  <div id="hexaeight-user-container" class="user-container"></div>
+  <div id="hexaeight-chat-container" class="chat-container">
+    <div #messagecontainer></div>
+  </div>
+
+  <div class="container">
+  <div class="button-container">
+
+    <textarea
+    placeholder="Type your message..."
+    [(ngModel)]="messageText"
+    rows="2"
+  ></textarea>
+    <button id="sendButton" class="btn btn-primary" (click)="sendMessage()">Send</button>
+    <button id="talkButton" class="btn btn-primary">Talk</button>
+  </div>
+  <div class="button-container">
+    <button
+      class="q-btn q-btn-item q-btn-rounded q-btn-action"
+      id="muteButton"
+    ></button>
+    <button
+      class="q-btn q-btn-item q-btn-rounded q-btn-action"
+      id="speakerButton"
+    ></button>
+    <select id="languageDropdown">
+      <!-- Language options will be populated dynamically -->
+    </select>
+  </div>
+</div>
