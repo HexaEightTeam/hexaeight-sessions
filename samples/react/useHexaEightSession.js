@@ -9,8 +9,8 @@ export default function useHexaEight() {
   useEffect(() => {
     const initSession = async () => {
       console.log('Initializing session...');
-      const clientid = '87ADEEA59F56FE1427ABC682763DF8474BADFDBC';
-      const tokenserverurl = 'https://anyemail.chat:8443';
+      const clientid = 'YOURCLIENTID';
+      const tokenserverurl = 'YOURTOKENSERVERURL';
       
       setLoading(true);
       try {
