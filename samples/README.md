@@ -1,3 +1,4 @@
+```
 samples
 ├── vanilla-js
 │   ├── hexaeight-init.js
@@ -15,7 +16,7 @@ samples
     ├── boot\hexaeight-init.js
     ├── components\HexaEightSession.vue
     └── css\app.scss
-
+```
 # Samples Folder
 
 The `samples` folder contains sample code demonstrating the integration of the HexaEight authentication module into various frameworks.
